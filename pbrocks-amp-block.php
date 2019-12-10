@@ -31,22 +31,23 @@ if ( defined( 'AMP__FILE__' ) ) {
  * @since 1.0
  */
 function amp_check_for_plugin_admin_notice() {
-		$plugin_to_check_for = 'AMP';
-	?>
-	<div class="notice notice-warning">
-		<p>
-			<?php
-			echo wp_kses_post(
-				sprintf(
-					__( 'For the <code>%1$s</code> plugin to run, the <code>%2$s</code> plugin also needs to be installed and activated.', 'pbrocks-amp-block' ),
-					'PBrocks\PBrocksAMPBlock',
-					$plugin_to_check_for
-				)
-			);
-			?>
-		</p>
-	</div>
-	<?php
+	$class      = 'notice notice-warning';
+	$distress   = __( 'Uh-oh!', 'pbrocks-amp-block' );
+	$plugin     = __( 'PBrocks AMP Block plugin', 'pbrocks-amp-block' );
+	$message    = __( 'requires that you also install and activate', 'pbrocks-amp-block' );
+	$dependency = __( 'the AMP plugin.', 'pbrocks-amp-block' );
+	$amp_url    = esc_url(
+		add_query_arg(
+			[
+				's'    => 'amp',
+				'tab'  => 'search',
+				'type' => 'term',
+			],
+			admin_url( 'plugin-install.php' )
+		)
+	);
+
+	printf( '<div class="%1$s"><p><b>%2$s <em>%3$s</em></b> %4$s <b><em><a href="%6$s">%5$s</a></em></b></p></div>', esc_attr( $class ), esc_html( $distress ), esc_html( $plugin ), esc_html( $message ), esc_html( $dependency ), $amp_url );
 }
 
 /**
