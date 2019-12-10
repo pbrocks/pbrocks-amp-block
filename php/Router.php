@@ -150,11 +150,21 @@ class Router {
 			$num_terms = $attributes['amp_url_errors'];
 		}
 
-		$output  = '<div class="wp-block-pbrocks-amp-block-amp-info">';
+		$descriptor1 = 'Validated AMP URLs';
+		$descriptor2 = 'AMP URL Errors';
+
+		$output = '<div class="wp-block-pbrocks-amp-block-amp-info">';
+
 		$output .= wp_kses_post(
 			sprintf(
-				__( '<h3>' . 'Validated AMP URLs %1$s', 'pbrocks-amp-block' ) . '</h3><h3 class="pbrx-negative">' . __( 'AMP URL Errors %2$s', 'pbrocks-amp-block' ) . '<h3>',
+				__(
+					'<h3>%1$s %2$s</h3>
+					<h3 class="pbrx-negative">%3$s %4$s</h3>',
+					'pbrocks-amp-block'
+				),
+				$descriptor1,
 				$valid,
+				$descriptor2,
 				$num_terms
 			)
 		);
