@@ -2,10 +2,10 @@
 /**
  * Tests Case class.
  *
- * @package BlockScaffolding
+ * @package PBrocksAMPBlock
  */
 
-namespace XWP\BlockScaffolding;
+namespace PBrocks\PBrocksAMPBlock;
 
 use Mockery;
 use WP_Mock;

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Usage: ./block-scaffolding-wp/init.sh
+# Usage: ./pbrocks-amp-block/init.sh
 
 # Check for valid plugin name.
 function valid_name () {
@@ -18,7 +18,7 @@ echo
 echo "This script will automatically generate a new plugin based on the scaffolding."
 echo "The way it works is you enter a plugin name like 'Hello World' and the script "
 echo "will create a directory 'hello-world' in the current working directory, while "
-echo "performing substitutions on the 'block-scaffolding' scaffolding plugin."
+echo "performing substitutions on the 'pbrocks-amp-block' scaffolding plugin."
 echo
 
 echo -n "Enter your plugin name and press [ENTER]: "
@@ -79,7 +79,7 @@ cd "$cwd"
 
 if [[ -e $( basename "$0" ) ]]; then
     echo
-	echo "Moving up one directory outside of 'block-scaffolding-wp'"
+	echo "Moving up one directory outside of 'pbrocks-amp-block'"
 	cd ..
 fi
 
@@ -95,15 +95,15 @@ git clone "$src_repo_path" "$repo"
 
 cd "$repo"
 
-git mv block-scaffolding.php "$slug.php"
+git mv pbrocks-amp-block.php "$slug.php"
 
 git grep -lz "xwp" | xargs -0 sed -i '' -e "s/xwp/$org_lower/g"
-git grep -lz "block-scaffolding-wp" | xargs -0 sed -i '' -e "s/block-scaffolding-wp/$repo/g"
+git grep -lz "pbrocks-amp-block" | xargs -0 sed -i '' -e "s/pbrocks-amp-block/$repo/g"
 
 git grep -lz "XWP" | xargs -0 sed -i '' -e "s/XWP/$org/g"
 git grep -lz "Block Scaffolding" | xargs -0 sed -i '' -e "s/Block Scaffolding/$name/g"
-git grep -lz "BlockScaffolding" | xargs -0 sed -i '' -e "s/BlockScaffolding/$namespace/g"
-git grep -lz "block-scaffolding" | xargs -0 sed -i '' -e "s/block-scaffolding/$slug/g"
+git grep -lz "PRrocksAMPBlock" | xargs -0 sed -i '' -e "s/PRrocksAMPBlock/$namespace/g"
+git grep -lz "pbrocks-amp-block" | xargs -0 sed -i '' -e "s/pbrocks-amp-block/$slug/g"
 
 # Clean slate.
 rm -rf .git

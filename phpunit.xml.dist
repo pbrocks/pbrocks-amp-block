@@ -9,7 +9,7 @@
 	>
 
 	<testsuites>
-		<testsuite name="block-scaffolding-wp">
+		<testsuite name="pbrocks-amp-block">
 			<directory suffix=".php">./tests/php/</directory>
 			<exclude>./tests/php/TestCase.php</exclude>
 		</testsuite>
@@ -19,7 +19,7 @@
 		<whitelist processUncoveredFilesFromWhitelist="false">
 			<directory suffix=".php">./</directory>
 			<exclude>
-				<file>./block-scaffolding.php</file>
+				<file>./pbrocks-amp-block.php</file>
 				<directory suffix=".php">./node_modules</directory>
 				<directory suffix=".php">./tests</directory>
 				<directory suffix=".php">./vendor</directory>

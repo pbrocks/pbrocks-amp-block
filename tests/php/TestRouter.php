@@ -2,10 +2,10 @@
 /**
  * Tests for Router class.
  *
- * @package BlockScaffolding
+ * @package PBrocksAMPBlock
  */
 
-namespace XWP\BlockScaffolding;
+namespace PBrocks\PBrocksAMPBlock;
 
 use Mockery;
 use WP_Mock;
@@ -18,7 +18,7 @@ class TestRouter extends TestCase {
 	/**
 	 * Test init.
 	 *
-	 * @covers \XWP\BlockScaffolding\Router::init()
+	 * @covers \PBrocks\PBrocksAMPBlock\Router::init()
 	 */
 	public function test_init() {
 		$plugin = new Router( Mockery::mock( Plugin::class ) );
@@ -31,7 +31,7 @@ class TestRouter extends TestCase {
 	/**
 	 * Test enqueue_editor_assets.
 	 *
-	 * @covers \XWP\BlockScaffolding\Router::enqueue_editor_assets()
+	 * @covers \PBrocks\PBrocksAMPBlock\Router::enqueue_editor_assets()
 	 */
 	public function test_enqueue_editor_assets() {
 		$plugin = Mockery::mock( Plugin::class );
@@ -48,7 +48,7 @@ class TestRouter extends TestCase {
 		WP_Mock::userFunction( 'wp_enqueue_script' )
 			->once()
 			->with(
-				'block-scaffolding-js',
+				'pbrocks-amp-block-js',
 				'http://example.com/js/dist/editor.js',
 				Mockery::type( 'array' ),
 				'1.2.3'

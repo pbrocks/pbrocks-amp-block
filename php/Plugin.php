@@ -2,10 +2,10 @@
 /**
  * Plugin class.
  *
- * @package BlockScaffolding
+ * @package PBrocksAMPBlock
  */
 
-namespace XWP\BlockScaffolding;
+namespace PBrocks\PBrocksAMPBlock;
 
 /**
  * WordPress plugin interface.

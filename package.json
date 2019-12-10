@@ -1,16 +1,16 @@
 {
-  "name": "@xwp/block-scaffolding-wp",
+  "name": "@pbrocks/pbrocks-amp-block",
   "version": "1.0.0",
   "description": "Block Scaffolding for WordPress.",
   "author": "XWP",
   "license": "GPL-2.0-or-later",
   "bugs": {
-    "url": "https://github.com/xwp/block-scaffolding-wp/issues"
+    "url": "https://github.com/pbrocks/pbrocks-amp-block/issues"
   },
-  "homepage": "https://github.com/xwp/block-scaffolding-wp#readme",
+  "homepage": "https://github.com/pbrocks/pbrocks-amp-block#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xwp/block-scaffolding-wp.git"
+    "url": "git+https://github.com/pbrocks/pbrocks-amp-block.git"
   },
   "scripts": {
     "postinstall": "composer install",

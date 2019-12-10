@@ -1,5 +1,5 @@
 {
-  "name": "xwp/block-scaffolding-wp",
+  "name": "pbrocks/pbrocks-amp-block",
   "description": "Block Scaffolding for WordPress.",
   "type": "wordpress-plugin",
   "license": "GPL-2.0-or-later",
@@ -18,12 +18,12 @@
   },
   "autoload": {
     "psr-4": {
-      "XWP\\BlockScaffolding\\": "php/"
+      "PBrocks\\PBrocksAMPBlock\\": "php/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "XWP\\BlockScaffolding\\": "tests/php/"
+      "PBrocks\\PBrocksAMPBlock\\": "tests/php/"
     }
   },
   "scripts": {
