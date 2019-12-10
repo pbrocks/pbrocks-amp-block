@@ -40,7 +40,7 @@ class Router {
 	}
 
 	/**
-	 * Load our block assets.
+	 * [enqueue_editor_assets] Load block editor assets.
 	 *
 	 * @return void
 	 */
@@ -65,9 +65,9 @@ class Router {
 	}
 
 	/**
-	 * [enqueue_amp_block_assets]
+	 * [enqueue_amp_block_assets] Load block assets.
 	 *
-	 * @return [type] [description]
+	 * @return void
 	 */
 	public function enqueue_amp_block_assets() {
 		wp_enqueue_style(
@@ -79,9 +79,9 @@ class Router {
 	}
 
 	/**
-	 * [get_number_of_valid_urls description]
+	 * [get_number_of_valid_urls]
 	 *
-	 * @return [type] [description]
+	 * @return Object
 	 */
 	public function get_number_of_valid_urls() {
 		$post_type = 'amp_validated_url';
@@ -90,9 +90,9 @@ class Router {
 	}
 
 	/**
-	 * [get_number_of_errors description]
+	 * [get_number_of_errors]
 	 *
-	 * @return [type] [description]
+	 * @return Object
 	 */
 	public function get_number_of_errors() {
 		$taxonomy = 'amp_validation_error';
@@ -105,9 +105,9 @@ class Router {
 	}
 
 	/**
-	 * [built_with_php_init description]
+	 * [built_with_php_init] Register the block.
 	 *
-	 * @return [type] [description]
+	 * @return Array The attributes for the block.
 	 */
 	public function built_with_php_init() {
 		register_block_type(
@@ -133,9 +133,9 @@ class Router {
 	}
 
 	/**
-	 * [render_amp_info_with_php]
+	 * [render_amp_info_with_php] Render the block.
 	 *
-	 * @return string [description]
+	 * @return string
 	 */
 	public function render_amp_info_with_php( $attributes ) {
 
