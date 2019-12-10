@@ -153,7 +153,7 @@ class Router {
 		$output  = '<div class="wp-block-pbrocks-amp-block-amp-info">';
 		$output .= wp_kses_post(
 			sprintf(
-				__( '<h3>' . 'Validated AMP URLs %1$s', 'pbrocks-amp-block' ) . '</h3><h3 style="color:salmon;">' . __( 'AMP URL Errors %2$s', 'pbrocks-amp-block' ) . '<h3>',
+				__( '<h3>' . 'Validated AMP URLs %1$s', 'pbrocks-amp-block' ) . '</h3><h3 class="pbrx-negative">' . __( 'AMP URL Errors %2$s', 'pbrocks-amp-block' ) . '<h3>',
 				$valid,
 				$num_terms
 			)

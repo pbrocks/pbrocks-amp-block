@@ -16,7 +16,7 @@ registerBlockType( 'pbrocks-amp-block/amp-info', {
 		src: icon,
 	},
 
-	category: 'layout',
+	category: 'widgets',
 
 	edit( props ) {
 		return (
